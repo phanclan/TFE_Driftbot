@@ -76,7 +76,7 @@ EOF
 resource "aws_cloudwatch_event_rule" "event_run" {
   name                = "TFE_DB-${var.TFE_ORG}"
   description         = "Automated runs in TFE to detect drift"
-  schedule_expression = "rate(${var.check_time} %{ if var.check_time == 1 }minute%{ else }minutes%{ endif })"
+  schedule_expression = "rate(${var.check_time} %{ if var.check_time == "1" }minute%{ else }minutes%{ endif })"
   # schedule_expression = "rate(1 minute)"
 }
 

@@ -8,6 +8,7 @@ variable "TFE_TOKEN" {
 
 variable "TFE_URL" {
   description = "Full TFE URL"
+  default = "https://app.terraform.io"
 }
 
 variable "TFE_ORG" {
